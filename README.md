@@ -1,7 +1,7 @@
 # owlery
 Azure Functions Kafka Trigger Distribution + a simple trigger
 
-# Steps to run locally
+## Steps to run locally
 
 1. Run a Kafka cluster, refer this [tutorial](https://medium.com/@tsuyoshiushio/local-kafka-cluster-on-kubernetes-on-your-pc-in-5-minutes-651a2ff4dcde)
 2. Create a topic in the kafka cluster

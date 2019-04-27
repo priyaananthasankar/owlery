@@ -7,13 +7,11 @@ Azure Functions Kafka Trigger Distribution + a simple trigger
 2. Create a topic in the kafka cluster
 3. Get the broker ip and port
 4. Edit KafkaTrigger/KafkaPythonTrigger/function.json to provide broker list (eg: localhost:9092) and topic name
-5. Build docker container
-
+5. Use [functions core tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#v2) to install nuget package for Kafka binding locally. This will create the bin and obj folders.
+   `func extensions install --source ./nuget/`
+6. Build docker container
 `docker build -t image:tag`
-
-6. Run docker container
-
+7. Run docker container
 `docker run -it -p 8080:80 image:tag`
-
-7. Send messages to the topic. Use a tool like [KafkaCat](https://github.com/edenhill/kafkacat)
-8. See logs in container
+8. Send messages to the topic. Use a tool like [KafkaCat](https://github.com/edenhill/kafkacat)
+9. See logs in container
